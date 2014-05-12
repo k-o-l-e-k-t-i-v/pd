@@ -1,0 +1,61 @@
+#N canvas 110 70 597 442 10;
+#X obj 153 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty from 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 210 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty to 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 153 128 t b f;
+#X obj 210 128 t b f;
+#X obj 278 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty from 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 335 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty to 0 -8 0 10 -262144
+-1 -1 0 256;
+#X obj 335 128 t b f;
+#X obj 279 130 t b f;
+#X obj 149 170 expr (($f1-$f2)/($f3-$f2)*($f5-$f4))+$f4;
+#X obj 74 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty input_value 0 -8
+0 10 -262144 -1 -1 0 256;
+#X obj 223 237 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
+#X obj 232 209 clip;
+#X text 158 75 original scale;
+#X text 296 74 new scale;
+#X obj 28 -37 inlet;
+#X obj 223 258 outlet;
+#X obj 198 14 inlet;
+#X obj 237 14 inlet;
+#X obj 276 14 inlet;
+#X obj 315 14 inlet;
+#X obj 28 -16 route list float;
+#X obj 102 15 unpack f f f f;
+#X text 202 293 scaling object;
+#X text 87 318 set each input individually or send message in form
+of [f f f f( ... old scale from-to new scale from-to;
+#X connect 0 0 2 0;
+#X connect 1 0 3 0;
+#X connect 2 0 8 0;
+#X connect 2 1 8 1;
+#X connect 3 0 8 0;
+#X connect 3 1 8 2;
+#X connect 4 0 7 0;
+#X connect 5 0 6 0;
+#X connect 6 0 8 0;
+#X connect 6 1 8 4;
+#X connect 6 1 11 2;
+#X connect 7 0 8 0;
+#X connect 7 1 8 3;
+#X connect 7 1 11 1;
+#X connect 8 0 11 0;
+#X connect 9 0 8 0;
+#X connect 10 0 15 0;
+#X connect 11 0 10 0;
+#X connect 14 0 20 0;
+#X connect 16 0 0 0;
+#X connect 17 0 1 0;
+#X connect 18 0 4 0;
+#X connect 19 0 5 0;
+#X connect 20 0 21 0;
+#X connect 20 1 9 0;
+#X connect 21 0 0 0;
+#X connect 21 1 1 0;
+#X connect 21 2 4 0;
+#X connect 21 3 5 0;
