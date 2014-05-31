@@ -1,7 +1,7 @@
 #N canvas 930 201 450 300 10;
 #X obj 280 80 dumpOSC 8888;
 #X obj 39 161 sendOSC 8888;
-#X msg 39 138 connect 255.255.255.255 8888;
+#X msg 39 138 connect 239.0.0.1 8888;
 #X obj 11 69 inlet;
 #X obj 280 125 outlet;
 #X obj 39 117 loadbang;
